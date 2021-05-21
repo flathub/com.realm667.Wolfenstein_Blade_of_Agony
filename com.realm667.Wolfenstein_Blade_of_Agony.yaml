@@ -89,6 +89,7 @@ modules:
         sha256: d4c8e8594e10e423f881ff3115e3b6a6b0da6b6de73cef06b4c2801a994381d5
         x-checker-data:
           type: anitya
+          stable-only: true
           project-id: 17531
           url-template: https://github.com/coelckers/gzdoom/archive/refs/tags/g$version.tar.gz
       - type: archive
