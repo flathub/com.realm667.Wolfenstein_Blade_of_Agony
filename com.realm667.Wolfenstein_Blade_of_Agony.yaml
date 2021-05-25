@@ -92,7 +92,9 @@ modules:
           stable-only: true
           project-id: 17531
           url-template: https://github.com/coelckers/gzdoom/archive/refs/tags/g$version.tar.gz
-      - type: archive
-        url: https://github.com/nashmuhandes/WidePix/archive/master.zip
-        sha256: 7f273af8ad92cb8a828b6948c81d8060bba2e0f2bdd857d43b2b09801b7d18b0
+    # when updating gzdoom, update WidePix to commit used in the submodule:
+    # https://github.com/coelckers/gzdoom/tree/master/wadsrc_widescreen
+      - type: archive 
+        url: https://github.com/nashmuhandes/WidePix/archive/f4bb3541edd570cbccb58e5cdaba3dc0979208b9.zip
+        sha256: 6d0d61d30f7285b6049be6fcc9959f63e0b331a6a40b4ec5728049f2687a5f0d
         dest: wadsrc_widescreen/static
