@@ -24,7 +24,7 @@ modules:
       - '*'
     sources:
       - type: archive
-        url: https://github.com/jinfeihan57/p7zip/archive/v17.04.tar.gz
+        url: https://github.com/jinfeihan57/p7zip/archive/refs/tags/v17.04.tar.gz
         sha256: ea029a2e21d2d6ad0a156f6679bd66836204aa78148a4c5e498fe682e77127ef
         x-checker-data:
           type: anitya
@@ -72,8 +72,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: archive
-        url: https://github.com/coelckers/ZMusic/archive/1.1.6.tar.gz
-        sha256: 2cc4a08c4d213df80743828538631f452e1858c2ea5bb47a616e221492de05c0
+        url: https://github.com/coelckers/ZMusic/archive/refs/tags/1.1.8.tar.gz
+        sha256: 73082f661b7b0bb33348d1d186c132deec9132a1613480348a00172b49c9fd68
         x-checker-data:
           type: anitya
           project-id: 153600
@@ -85,8 +85,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: archive
-        url: https://github.com/coelckers/gzdoom/archive/55ce0510c2b181b941d30778f29b83a06955bb56.zip
-        sha256: d4c8e8594e10e423f881ff3115e3b6a6b0da6b6de73cef06b4c2801a994381d5
+        url: https://github.com/coelckers/gzdoom/archive/refs/tags/g4.6.0.tar.gz
+        sha256: 3c50fe9cffef497d6849d448abfeaa99d0f6d2bcd515d7b401c3ca2bb2ef6a91
         x-checker-data:
           type: anitya
           stable-only: true
@@ -94,5 +94,5 @@ modules:
           url-template: https://github.com/coelckers/gzdoom/archive/refs/tags/g$version.tar.gz
       - type: archive
         url: https://github.com/nashmuhandes/WidePix/archive/master.zip
-        sha256: 7f273af8ad92cb8a828b6948c81d8060bba2e0f2bdd857d43b2b09801b7d18b0
+        sha256: 1288c30cda1503f06cc719e159f822a56292f1811249de8e63f10bfcf86e31a9
         dest: wadsrc_widescreen/static
