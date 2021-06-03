@@ -16,6 +16,11 @@ cleanup:
   - /lib/cmake
   - /share/doc
 modules:
+
+  - shared-modules/linux-audio/libinstpatch.json
+  - shared-modules/linux-audio/fluidsynth2.json
+  - shared-modules/gzdoom/gzdoom.json
+
   - name: p7zip # required to assemble wolf_boa.ipk3
     no-autogen: true
     make-args:
@@ -66,35 +71,3 @@ modules:
           install -Dm 644 boa-${size}.png /app/share/icons/hicolor/${size}x${size}/apps/com.realm667.Wolfenstein_Blade_of_Agony.png
         done
 
-  - name: zmusic # build dependency of gzdoom
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
-    sources:
-      - type: archive
-        url: https://github.com/coelckers/ZMusic/archive/1.1.6.tar.gz
-        sha256: 2cc4a08c4d213df80743828538631f452e1858c2ea5bb47a616e221492de05c0
-        x-checker-data:
-          type: anitya
-          project-id: 153600
-          url-template: https://github.com/coelckers/ZMusic/archive/refs/tags/$version.tar.gz
-
-  - name: gzdoom
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
-    sources:
-      - type: archive
-        url: https://github.com/coelckers/gzdoom/archive/55ce0510c2b181b941d30778f29b83a06955bb56.zip
-        sha256: d4c8e8594e10e423f881ff3115e3b6a6b0da6b6de73cef06b4c2801a994381d5
-        x-checker-data:
-          type: anitya
-          stable-only: true
-          project-id: 17531
-          url-template: https://github.com/coelckers/gzdoom/archive/refs/tags/g$version.tar.gz
-    # when updating gzdoom, update WidePix to commit used in the submodule:
-    # https://github.com/coelckers/gzdoom/tree/master/wadsrc_widescreen
-      - type: archive 
-        url: https://github.com/nashmuhandes/WidePix/archive/f4bb3541edd570cbccb58e5cdaba3dc0979208b9.zip
-        sha256: 6d0d61d30f7285b6049be6fcc9959f63e0b331a6a40b4ec5728049f2687a5f0d
-        dest: wadsrc_widescreen/static
