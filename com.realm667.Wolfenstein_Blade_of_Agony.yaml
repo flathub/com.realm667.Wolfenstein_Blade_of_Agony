@@ -37,9 +37,9 @@ modules:
   - name: wolfenstein
     buildsystem: simple
     sources:
-      - type: archive
-        url: https://github.com/Realm667/WolfenDoom/archive/refs/tags/v3.0.tar.gz
-        sha256: e0b3955ca18336f45b0ad34e62dac538dc2e371cb2c7e5087480aa5db1005f30
+      - type: git
+        url: https://github.com/Realm667/WolfenDoom.git
+        tag: v3.1
         x-checker-data:
           type: anitya
           project-id: 155422
