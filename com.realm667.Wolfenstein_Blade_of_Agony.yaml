@@ -42,9 +42,9 @@ modules:
   - name: wolfenstein
     buildsystem: simple
     sources:
-      - type: archive
-        url: https://github.com/Realm667/WolfenDoom/archive/refs/tags/v3.0.tar.gz
-        sha256: e0b3955ca18336f45b0ad34e62dac538dc2e371cb2c7e5087480aa5db1005f30
+      - type: git
+        url: https://github.com/Realm667/WolfenDoom.git
+        tag: v3.1
         x-checker-data:
           type: anitya
           project-id: 155422
@@ -71,3 +71,29 @@ modules:
           install -Dm 644 boa-${size}.png /app/share/icons/hicolor/${size}x${size}/apps/com.realm667.Wolfenstein_Blade_of_Agony.png
         done
 
+  - name: zmusic # build dependency of gzdoom
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+    sources:
+      - type: archive
+        url: https://github.com/coelckers/ZMusic/archive/1.1.6.tar.gz
+        sha256: 2cc4a08c4d213df80743828538631f452e1858c2ea5bb47a616e221492de05c0
+        x-checker-data:
+          type: anitya
+          project-id: 153600
+          url-template: https://github.com/coelckers/ZMusic/archive/refs/tags/$version.tar.gz
+
+  - name: gzdoom
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+    sources:
+      - type: git
+        url: https://github.com/coelckers/gzdoom.git
+        tag: g4.6.0
+        x-checker-data:
+          type: anitya
+          stable-only: true
+          project-id: 17531
+          url-template: https://github.com/coelckers/gzdoom/archive/refs/tags/g$version.tar.gz
