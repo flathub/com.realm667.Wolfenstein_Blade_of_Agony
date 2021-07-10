@@ -91,4 +91,4 @@ modules:
           type: anitya
           stable-only: true
           project-id: 17531
-          url-template: https://github.com/coelckers/gzdoom/archive/refs/tags/g$version.tar.gz
+          tag-template: g$version
