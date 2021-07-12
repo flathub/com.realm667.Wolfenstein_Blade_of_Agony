@@ -43,7 +43,7 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 155422
-          url-template: https://github.com/Realm667/WolfenDoom/archive/refs/tags/$version.tar.gz
+          tag-template: v$version
   # generated with 'convert boa.ico[0] -background none -flatten -resize 128 boa.png' from
   # https://github.com/Realm667/WolfenDoom/blob/master/boa.ico
       - type: file
@@ -55,7 +55,7 @@ modules:
     build-commands:
       - sed -i 's|$zipname|wolf_boa.ipk3|g' ./build.sh
       - sed -i 's|then mv|then true|g' ./build.sh
-      - ./build.sh --release
+      - ./build.sh --release --no-update
       - install -Dm 644 wolf_boa.ipk3 -t /app/share/games/doom/
       - sed -i 's|/usr|/app|g' dist/com.realm667.Wolfenstein_Blade_of_Agony.desktop
       - install -Dm 644 dist/com.realm667.Wolfenstein_Blade_of_Agony.desktop -t /app/share/applications/
