@@ -24,7 +24,7 @@ modules:
       - '*'
     sources:
       - type: archive
-        url: https://github.com/jinfeihan57/p7zip/archive/v17.04.tar.gz
+        url: https://github.com/jinfeihan57/p7zip/archive/refs/tags/v17.04.tar.gz
         sha256: ea029a2e21d2d6ad0a156f6679bd66836204aa78148a4c5e498fe682e77127ef
         x-checker-data:
           type: anitya
@@ -46,6 +46,7 @@ modules:
           tag-template: v$version
   # generated with 'convert boa.ico[0] -background none -flatten -resize 128 boa.png' from
   # https://github.com/Realm667/WolfenDoom/blob/master/boa.ico
+        commit: fd2e51cd97360d10ceb73a172bdf7a6ce0c1aac8
       - type: file
         path: boa-64.png
       - type: file
@@ -72,8 +73,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: archive
-        url: https://github.com/coelckers/ZMusic/archive/1.1.6.tar.gz
-        sha256: 2cc4a08c4d213df80743828538631f452e1858c2ea5bb47a616e221492de05c0
+        url: https://github.com/coelckers/ZMusic/archive/refs/tags/1.1.8.tar.gz
+        sha256: 73082f661b7b0bb33348d1d186c132deec9132a1613480348a00172b49c9fd68
         x-checker-data:
           type: anitya
           project-id: 153600
@@ -86,9 +87,10 @@ modules:
     sources:
       - type: git
         url: https://github.com/coelckers/gzdoom.git
-        tag: g4.6.0
+        tag: g4.6.1
         x-checker-data:
           type: anitya
           stable-only: true
           project-id: 17531
           tag-template: g$version
+        commit: 347324eed96db5b63a4943720cd583f0dcee9674
