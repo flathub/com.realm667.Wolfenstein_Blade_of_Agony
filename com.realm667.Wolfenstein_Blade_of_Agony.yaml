@@ -73,8 +73,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: archive
-        url: https://github.com/coelckers/ZMusic/archive/1.1.6.tar.gz
-        sha256: 2cc4a08c4d213df80743828538631f452e1858c2ea5bb47a616e221492de05c0
+        url: https://github.com/coelckers/ZMusic/archive/refs/tags/1.1.8.tar.gz
+        sha256: 73082f661b7b0bb33348d1d186c132deec9132a1613480348a00172b49c9fd68
         x-checker-data:
           type: anitya
           project-id: 153600
