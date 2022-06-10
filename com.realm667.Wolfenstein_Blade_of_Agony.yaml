@@ -16,6 +16,11 @@ cleanup:
   - /lib/cmake
   - /share/doc
 modules:
+
+  - shared-modules/linux-audio/libinstpatch.json
+  - shared-modules/linux-audio/fluidsynth2.json
+  - shared-modules/gzdoom/gzdoom.json
+
   - name: p7zip # required to assemble wolf_boa.ipk3
     no-autogen: true
     make-args:
