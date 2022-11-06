@@ -73,8 +73,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: archive
-        url: https://github.com/coelckers/ZMusic/archive/refs/tags/1.1.10.tar.gz
-        sha256: 378435b35f02a3123ee9e01b5e7990017f9bc1244b788e3bf54b37b34a2985ba
+        url: https://github.com/coelckers/ZMusic/archive/refs/tags/1.1.11.tar.gz
+        sha256: 623c3d7edfcdbe1ba4e7a9dc9a4d834fb92a228881621247855ecd57447631dd
         x-checker-data:
           type: anitya
           project-id: 153600
@@ -87,10 +87,10 @@ modules:
     sources:
       - type: git
         url: https://github.com/coelckers/gzdoom.git
-        tag: g4.7.1
+        tag: g4.9.0a
         x-checker-data:
           type: anitya
           stable-only: true
           project-id: 17531
           tag-template: g$version
-        commit: 107ff702423686414680d6458fea63a2647692c4
+        commit: 9b2f2da93bbe9faae8c4dff33b89d4c011a2f08f
