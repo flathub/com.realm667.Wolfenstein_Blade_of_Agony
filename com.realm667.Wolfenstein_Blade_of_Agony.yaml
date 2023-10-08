@@ -87,10 +87,10 @@ modules:
     sources:
       - type: git
         url: https://github.com/coelckers/gzdoom.git
-        tag: g4.10.0
+        tag: g4.11.0a
         x-checker-data:
           type: anitya
           stable-only: true
           project-id: 17531
           tag-template: g$version
-        commit: 75da94aecd9b1c4c2e16b449dea1b9f9838c1af2
+        commit: 431ec3da2a39a7400992aa48b9a1cbd3b48e79c2
