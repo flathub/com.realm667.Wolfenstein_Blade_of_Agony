@@ -24,12 +24,12 @@ modules:
       - '*'
     sources:
       - type: archive
-        url: https://github.com/jinfeihan57/p7zip/archive/refs/tags/v17.04.tar.gz
-        sha256: ea029a2e21d2d6ad0a156f6679bd66836204aa78148a4c5e498fe682e77127ef
+        url: https://github.com/p7zip-project/p7zip/archive/refs/tags/v17.05.tar.gz
+        sha256: d2788f892571058c08d27095c22154579dfefb807ebe357d145ab2ddddefb1a6
         x-checker-data:
           type: anitya
           project-id: 2583
-          url-template: https://github.com/jinfeihan57/p7zip/archive/refs/tags/v$version.tar.gz
+          url-template: https://github.com/p7zip-project/p7zip/archive/refs/tags/v$version.tar.gz
       - type: shell
         commands:
           - sed -i 's|/usr/local|/app|g' makefile.common
@@ -40,10 +40,6 @@ modules:
       - type: git
         url: https://github.com/Realm667/WolfenDoom.git
         tag: v3.1
-        x-checker-data:
-          type: anitya
-          project-id: 155422
-          tag-template: v$version
   # generated with 'convert boa.ico[0] -background none -flatten -resize 128 boa.png' from
   # https://github.com/Realm667/WolfenDoom/blob/master/boa.ico
         commit: fd2e51cd97360d10ceb73a172bdf7a6ce0c1aac8
@@ -73,12 +69,12 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: archive
-        url: https://github.com/coelckers/ZMusic/archive/refs/tags/1.1.12.tar.gz
+        url: https://github.com/ZDoom/ZMusic/archive/refs/tags/1.1.12.tar.gz
         sha256: da818594b395aa9174561a36362332b0ab8e7906d2e556ec47669326e67613d4
         x-checker-data:
           type: anitya
           project-id: 153600
-          url-template: https://github.com/coelckers/ZMusic/archive/refs/tags/$version.tar.gz
+          url-template: https://github.com/ZDoom/ZMusic/archive/refs/tags/$version.tar.gz
 
   - name: gzdoom
     buildsystem: cmake-ninja
@@ -86,11 +82,6 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: git
-        url: https://github.com/coelckers/gzdoom.git
-        tag: g4.11.3
-        x-checker-data:
-          type: anitya
-          stable-only: true
-          project-id: 17531
-          tag-template: g$version
-        commit: 6ce809efe2902e43ceaa7031b875225d3a0367de
+        url: https://github.com/ZDoom/gzdoom.git
+        tag: g4.6.1
+        commit: 347324eed96db5b63a4943720cd583f0dcee9674
