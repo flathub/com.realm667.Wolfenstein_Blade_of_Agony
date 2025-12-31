@@ -1,0 +1,40 @@
+From 436bfe4ca2676fe94745b14efdc5b3a2ede00cf2 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Sabri=20=C3=9Cnal?= <yakushabb@gmail.com>
+Date: Wed, 31 Dec 2025 16:37:10 +0300
+Subject: [PATCH 2/2] Fix appdata paper cuts
+
+---
+ ....realm667.Wolfenstein_Blade_of_Agony.metainfo.xml | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+
+diff --git a/dist/com.realm667.Wolfenstein_Blade_of_Agony.metainfo.xml b/dist/com.realm667.Wolfenstein_Blade_of_Agony.metainfo.xml
+index facfa07f..663c4c90 100644
+--- a/dist/com.realm667.Wolfenstein_Blade_of_Agony.metainfo.xml
++++ b/dist/com.realm667.Wolfenstein_Blade_of_Agony.metainfo.xml
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<component type="desktop">
+-	<id>com.realm667.Wolfenstein_Blade_of_Agony.desktop</id>
++<component type="desktop-application">
++	<id>com.realm667.Wolfenstein_Blade_of_Agony</id>
+ 	<name>Wolfenstein: Blade of Agony</name>
+ 	<summary>Story-driven FPS inspired by WWII shooters from the 90's and early 2000's</summary>
+ 	<metadata_license>CC0-1.0</metadata_license>
+@@ -8,6 +8,14 @@
+ 	<developer_name>Realm667</developer_name>
+ 	<url type="homepage">http://boa.realm667.com</url>
+ 	<url type="bugtracker">https://github.com/Realm667/WolfenDoom/issues</url>
++	<url type="vcs-browser">https://github.com/Realm667/WolfenDoom/issues</url>
++	<provides>
++		<id>com.realm667.Wolfenstein_Blade_of_Agony.desktop</id>
++	</provides>
++	<replaces>
++		<id>com.realm667.Wolfenstein_Blade_of_Agony.desktop</id>
++	</replaces>
++	<launchable type="desktop-id">com.realm667.Wolfenstein_Blade_of_Agony.desktop</launchable>
+ 	<description>
+ 	<p>
+ 		Blade of Agony is a story-driven FPS. The project is inspired by WWII shooters from the 90's and early 2000's, like Wolfenstein 3D, Medal of Honor, and Call of Duty, but with faster-paced gameplay in the spirit of Doom! The game can be played standalone using the GZDoom engine as a base.
+-- 
+2.52.0
+
