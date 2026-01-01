@@ -24,8 +24,8 @@ modules:
       - '*'
     sources:
       - type: archive
-        url: https://github.com/p7zip-project/p7zip/archive/refs/tags/v17.05.tar.gz
-        sha256: d2788f892571058c08d27095c22154579dfefb807ebe357d145ab2ddddefb1a6
+        url: https://github.com/p7zip-project/p7zip/archive/refs/tags/v17.06.tar.gz
+        sha256: c35640020e8f044b425d9c18e1808ff9206dc7caf77c9720f57eb0849d714cd1
         x-checker-data:
           type: anitya
           project-id: 2583
@@ -91,10 +91,10 @@ modules:
     sources:
       - type: git
         url: https://github.com/coelckers/gzdoom.git
-        tag: g4.11.3
+        tag: g4.14.2
         x-checker-data:
           type: anitya
           stable-only: true
           project-id: 17531
           tag-template: g$version
-        commit: 6ce809efe2902e43ceaa7031b875225d3a0367de
+        commit: 99aa489d09015a95bb78df2b30ede29f328cc874
