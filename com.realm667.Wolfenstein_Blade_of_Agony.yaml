@@ -45,8 +45,6 @@ modules:
           project-id: 155422
           tag-template: v$version
         commit: fd2e51cd97360d10ceb73a172bdf7a6ce0c1aac8
-      - type: patch
-        path: fix-appdata.patch
 # generated with 'convert boa.ico[0] -background none -flatten -resize 128 boa.png' from
 # https://github.com/Realm667/WolfenDoom/blob/master/boa.ico
       - type: file
