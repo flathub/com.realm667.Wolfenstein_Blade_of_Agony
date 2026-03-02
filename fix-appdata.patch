@@ -1,17 +1,8 @@
-From 436bfe4ca2676fe94745b14efdc5b3a2ede00cf2 Mon Sep 17 00:00:00 2001
-From: =?UTF-8?q?Sabri=20=C3=9Cnal?= <yakushabb@gmail.com>
-Date: Wed, 31 Dec 2025 16:37:10 +0300
-Subject: [PATCH 2/2] Fix appdata paper cuts
-
----
- ....realm667.Wolfenstein_Blade_of_Agony.metainfo.xml | 12 ++++++++++--
- 1 file changed, 10 insertions(+), 2 deletions(-)
-
 diff --git a/dist/com.realm667.Wolfenstein_Blade_of_Agony.metainfo.xml b/dist/com.realm667.Wolfenstein_Blade_of_Agony.metainfo.xml
-index facfa07f..663c4c90 100644
+index facfa07f6..16c174779 100644
 --- a/dist/com.realm667.Wolfenstein_Blade_of_Agony.metainfo.xml
 +++ b/dist/com.realm667.Wolfenstein_Blade_of_Agony.metainfo.xml
-@@ -1,6 +1,6 @@
+@@ -1,20 +1,30 @@
  <?xml version="1.0" encoding="UTF-8"?>
 -<component type="desktop">
 -	<id>com.realm667.Wolfenstein_Blade_of_Agony.desktop</id>
@@ -20,21 +11,79 @@ index facfa07f..663c4c90 100644
  	<name>Wolfenstein: Blade of Agony</name>
  	<summary>Story-driven FPS inspired by WWII shooters from the 90's and early 2000's</summary>
  	<metadata_license>CC0-1.0</metadata_license>
-@@ -8,6 +8,14 @@
- 	<developer_name>Realm667</developer_name>
- 	<url type="homepage">http://boa.realm667.com</url>
+ 	<project_license>CC-BY-NC-SA-3.0</project_license>
+-	<developer_name>Realm667</developer_name>
+-	<url type="homepage">http://boa.realm667.com</url>
++	<developer id="com.realm667">
++		<name>Realm667</name>
++	</developer>
++	<url type="homepage">https://boa.realm667.com</url>
  	<url type="bugtracker">https://github.com/Realm667/WolfenDoom/issues</url>
-+	<url type="vcs-browser">https://github.com/Realm667/WolfenDoom/issues</url>
-+	<provides>
-+		<id>com.realm667.Wolfenstein_Blade_of_Agony.desktop</id>
-+	</provides>
-+	<replaces>
-+		<id>com.realm667.Wolfenstein_Blade_of_Agony.desktop</id>
-+	</replaces>
++	<url type="faq">https://boa.realm667.com/help/f-a-q</url>
++	<url type="help">https://discord.gg/5zfvsbzPGW</url>
++	<url type="donation">https://boa.realm667.com/team</url>
++	<url type="translate">https://boa.realm667.com/index.php/about</url>
++	<url type="contact">https://boa.realm667.com/imprint</url>
++	<url type="vcs-browser">https://github.com/Realm667/WolfenDoom</url>
 +	<launchable type="desktop-id">com.realm667.Wolfenstein_Blade_of_Agony.desktop</launchable>
  	<description>
  	<p>
  		Blade of Agony is a story-driven FPS. The project is inspired by WWII shooters from the 90's and early 2000's, like Wolfenstein 3D, Medal of Honor, and Call of Duty, but with faster-paced gameplay in the spirit of Doom! The game can be played standalone using the GZDoom engine as a base.
--- 
-2.52.0
-
+ 	</p>
+ 	<p>
+ 		STORY
+-
++	</p>
++	<p>
+ 		It's 1942, and the war approaches its peak. The U.S. has joined the Allied forces, and the Soviets are pushing back the front in the east. The tides of war are turning, and Hitler's victory seems more and more beyond his grasp. But the Nazis, refusing to capitulate, have grown obsessed with human experiments and occult artifacts, in which they see a potential escape from their final Doom. The Allied leaders reject this possibility as nonsense; nonetheless, some still fear what the Führer might be up to. The situation is nebulous, however, and little is certain.
+ 	</p>
+ 	<p>
+@@ -22,7 +32,8 @@
+ 	</p>
+ 	<p>
+ 		FEATURES
+-
++	</p>
++	<p>
+ 		Blade of Agony is much more than just a pastiche of the classic shooters that inspired it; the project will offer a unique experience. It also has many features not often seen in source port projects--Blade of Agony truly pushes GZDoom to its limits.
+ 	</p>
+ 	<ul>
+@@ -38,6 +49,14 @@
+ 		<li>Much, much more!</li>
+ 	</ul>
+ 	</description>
++	<categories>
++		<category>Game</category>
++	</categories>
++	<icon type="remote">https://raw.githubusercontent.com/flathub/com.realm667.Wolfenstein_Blade_of_Agony/refs/heads/master/boa-256.png</icon>
++	<branding>
++		<color type="primary" scheme_preference="light">#c80000</color>
++		<color type="primary" scheme_preference="dark">#700000</color>
++	</branding>
+ 	<screenshots>
+ 		<screenshot type="default">
+ 			<image>https://boa.realm667.com/images/screenshots/c1/Screenshot_BoA_20210418_213149.jpg</image>
+@@ -71,7 +90,7 @@
+ 			<image>https://boa.realm667.com/images/screenshots/c2/Screenshot_BoA_20210418_215635.jpg</image>
+ 			<caption>Chapter 2</caption>
+ 		</screenshot>
+-        	<screenshot>
++			<screenshot>
+ 			<image>https://boa.realm667.com/images/screenshots/c3/Screenshot_BoA_20210418_222455.jpg</image>
+ 			<caption>Chapter 3</caption>
+ 		</screenshot>
+@@ -88,6 +107,14 @@
+ 			<caption>Chapter 3</caption>
+ 		</screenshot>
+ 	</screenshots>
++	<supports>
++	<control>keyboard</control>
++	<control>pointing</control>
++	<control>gamepad</control>
++	</supports>
++	<requires>
++		<display_length compare="ge">480</display_length>
++	</requires>
+ 	<releases>
+ 		<release date="2021-07-09" version="3.1"/>
+ 		<release date="2021-04-30" version="3.0"/>
